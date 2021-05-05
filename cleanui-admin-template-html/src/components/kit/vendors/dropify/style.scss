@@ -1,0 +1,57 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  DROPIFY */
+
+.dropify-wrapper {
+  border: 1px solid $border;
+  border-radius: 5px;
+
+  &:hover {
+    background-image: linear-gradient(
+      -45deg,
+      $gray-1 25%,
+      transparent 25%,
+      transparent 50%,
+      $gray-1 50%,
+      $gray-1 75%,
+      transparent 75%,
+      transparent
+    );
+  }
+
+  &.disabled {
+    opacity: 0.5;
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .dropify-wrapper {
+    background-color: $dark-gray-5;
+    border-color: $dark-gray-4;
+    color: $dark-gray-1;
+
+    &:hover {
+      background-image: linear-gradient(
+        -45deg,
+        rgba($gray-1, 0.03) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba($gray-1, 0.03) 50%,
+        rgba($gray-1, 0.03) 75%,
+        transparent 75%,
+        transparent
+      );
+    }
+
+    .dropify-preview {
+      background-color: $dark-gray-5;
+    }
+
+    .dropify-font-file,
+    .file-icon {
+      color: $dark-gray-3;
+    }
+  }
+}

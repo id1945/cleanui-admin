@@ -1,0 +1,79 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  BOOTSTRAP SWEETALERT */
+
+body.stop-scrolling {
+  height: inherit;
+  overflow: inherit;
+}
+
+.sweet-overlay {
+  background: rgba($black, 0.3);
+}
+
+.sweet-alert {
+  h2 {
+    font-weight: 400;
+    position: relative;
+    margin: 30px 0 15px;
+  }
+  p {
+    margin: 0 0 10px;
+  }
+  .lead {
+    font-weight: 400;
+    font-size: 18px;
+    color: $black;
+    margin-bottom: 20px;
+  }
+  .btn {
+    min-width: 150px;
+    border-radius: 3px;
+    box-shadow: none !important;
+    margin: 0 5px 15px;
+    border: none !important;
+  }
+  .btn-light {
+    color: $text !important;
+  }
+  .btn-success {
+    background: $success;
+  }
+  .btn-warning {
+    border-color: $warning;
+  }
+  .btn-danger {
+    border-color: $danger;
+  }
+  .btn-info {
+    border-color: $info;
+  }
+  .sa-icon.sa-success {
+    .line {
+      background-color: $success;
+    }
+    .placeholder {
+      border-color: $success;
+    }
+  }
+  .sa-icon.sa-warning {
+    border-color: $warning;
+    span {
+      background: $warning;
+    }
+  }
+  .sa-icon.sa-error {
+    border-color: $danger;
+    .line {
+      background-color: $danger;
+    }
+  }
+  .sa-icon.sa-info {
+    border-color: $info;
+    &:before,
+    &:after {
+      background-color: $info;
+    }
+  }
+}

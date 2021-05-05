@@ -1,0 +1,117 @@
+<div class="kit__utils__heading">
+  <h5>
+    <span class="mr-3">Bootstrap Select</span>
+    <a
+      href="https://silviomoreto.github.io/bootstrap-select/"
+      target="_blank"
+      class="btn btn-sm btn-light"
+    >
+      Official Documentation
+      <i class="fe fe-corner-right-up"></i>
+    </a>
+  </h5>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-5">
+              <h5 class="mb-4"><strong>Standard Select Boxes</strong></h5>
+              <select class="selectpicker">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="mb-5">
+              <h5 class="mb-4"><strong>Select Boxes w/ Optgroups</strong></h5>
+              <select class="selectpicker">
+                <optgroup label="Picnic">
+                  <option>Mustard</option>
+                  <option>Ketchup</option>
+                  <option>Relish</option>
+                </optgroup>
+                <optgroup label="Camping">
+                  <option>Tent</option>
+                  <option>Flashlight</option>
+                  <option>Toilet Paper</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="mb-5">
+              <h5 class="mb-4"><strong>Live Search</strong></h5>
+              <select class="selectpicker" data-live-search="true">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="mb-5">
+              <h5 class="mb-4"><strong>Placeholder</strong></h5>
+              <select class="selectpicker" multiple title="Choose one of the following...">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="mb-5">
+              <h5 class="mb-4"><strong>Button Classes</strong></h5>
+              <select class="selectpicker mr-2" data-style="btn-primary">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+
+              <select class="selectpicker mr-2" data-style="btn-info">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+
+              <select class="selectpicker mr-2" data-style="btn-success">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+
+              <select class="selectpicker mr-2" data-style="btn-warning">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+
+              <select class="selectpicker" data-style="btn-danger">
+                <option>Mustard</option>
+                <option>Ketchup</option>
+                <option>Relish</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  ;(function($) {
+    'use strict'
+    $(function() {
+      $('.selectpicker').selectpicker()
+    })
+  })(jQuery)
+</script>

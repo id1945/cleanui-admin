@@ -1,0 +1,84 @@
+{
+  "name": "cleanui-admin-template-react-umi",
+  "version": "3.2.0",
+  "private": true,
+  "scripts": {
+    "start": "umi dev",
+    "build": "umi build",
+    "postinstall": "umi generate tmp",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,less}\"",
+    "stylelint": "stylelint \"src/**/*.{scss,less}\""
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,scss,less}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "git add"
+    ],
+    "src/**/*.{scss,less}": [
+      "stylelint"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.1.0",
+    "antd": "^4.2.0",
+    "axios": "^0.19.2",
+    "axios-mock-adapter": "^1.18.1",
+    "bootstrap": "^4.4.1",
+    "chart.js": "^2.9.3",
+    "chartist": "^0.11.4",
+    "chartist-plugin-tooltips-updated": "^0.1.2",
+    "classnames": "^2.2.6",
+    "connected-react-router": "^6.8.0",
+    "d3-dsv": "^1.2.0",
+    "d3-format": "^1.4.4",
+    "d3-time-format": "^2.2.3",
+    "draft-js": "^0.11.5",
+    "dva": "^2.6.0-beta.6",
+    "firebase": "^7.14.2",
+    "history": "^4.10.1",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "moment": "2.24.0",
+    "nprogress": "^0.2.0",
+    "qs": "^6.9.3",
+    "react": "^16.13.1",
+    "react-c3js": "^0.1.20",
+    "react-chartist": "^0.14.3",
+    "react-chartjs-2": "^2.9.0",
+    "react-dom": "^16.13.1",
+    "react-draft-wysiwyg": "^1.14.5",
+    "react-highlight-words": "^0.16.0",
+    "react-jvectormap": "^0.0.1",
+    "react-perfect-scrollbar": "^1.5.8",
+    "react-resizable": "^1.10.1",
+    "react-sortable-tree": "^2.7.1",
+    "react-sortablejs": "^2.0.11",
+    "react-stickynode": "^2.1.1",
+    "react-stockcharts": "^0.7.8",
+    "react-transition-group": "^4.3.0",
+    "reactstrap": "^8.4.1",
+    "sortablejs": "1.10.2",
+    "store": "^2.0.12"
+  },
+  "devDependencies": {
+    "@umijs/plugin-sass": "^1.1.1",
+    "@umijs/preset-react": "1.x",
+    "@umijs/test": "^3.2.5",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "umi": "^3.2.3",
+    "yorkie": "^2.0.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0"
+  }
+}

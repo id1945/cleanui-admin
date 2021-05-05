@@ -1,0 +1,10 @@
+We are working hard on a tool (Visual Builder) that will allow you to build any set of widgets and pages on the fly, and also get empty (seed) projects.
+
+The release date is approximately June-July 2020.
+
+At this point, just remove any unnecessary widgets, pages, edit the routing file... and you get the seed version!
+
+Thank you for your understanding and patience! We love you! :)
+
+Sincerely,
+Sellpixels.com

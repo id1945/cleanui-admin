@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" data-kit-theme="dark">
+@@include('src/versions/head.html')
+
+<body class="cui__layout--cardsShadow cui__layout--grayBackground cui__menuLeft--dark">
+  <div class="initial__loading"></div>
+  <div class="cui__layout cui__layout--hasSider">
+    @@include('src/components/cleanui/layout/support-chat/template.html')
+    @@include('src/components/cleanui/layout/sidebar/template.html')
+    @@include('src/components/cleanui/layout/menu-left/template.html')
+    <div class="cui__layout">
+      <div class="cui__layout__header">
+        @@include('src/components/cleanui/layout/topbar/template.html')
+      </div>
+      <div class="cui__layout__content">
+        @@include('src/components/cleanui/layout/breadcrumbs/template.html')
+        <div class="cui__utils__content">
+          <%= contents %>
+        </div>
+      </div>
+      <div class="cui__layout__footer">
+        @@include('src/components/cleanui/layout/footer/template.html')
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  C3 CHART */
+
+[data-kit-theme='dark'] {
+  .c3-grid line {
+    stroke: $dark-gray-3;
+  }
+  .c3 text {
+    fill: $dark-gray-1;
+  }
+  .c3-target text {
+    fill: $white;
+  }
+  .c3-chart-arc path {
+    stroke: $dark-gray-4;
+  }
+}

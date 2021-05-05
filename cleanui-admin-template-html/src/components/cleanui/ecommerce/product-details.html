@@ -1,0 +1,159 @@
+<div class="card overflow-hidden mb-4">
+  <div class="cui__ecommerce__productMark">New</div>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-4">
+        <a class="cui__ecommerce__productFavorite" href="javascript: void(0);"
+          ><i class="fe fe-heart font-size-21"></i
+        ></a>
+        <div class="height-250 cui__ecommerce__productMainImage mb-3">
+          <img
+            class="img-fluid"
+            src="../../components/kit/core/img/products/001.jpg"
+            alt="Product"
+          />
+        </div>
+        <div class="d-flex flex-wrap justify-content-center mb-3">
+          <div class="cui__ecommerce__productThumb width-100 height-100 border border-primary m-2">
+            <img class="img-fluid" src="../../components/kit/core/img/products/001.jpg" />
+          </div>
+          <div class="cui__ecommerce__productThumb width-100 height-100 border m-2">
+            <img class="img-fluid" src="../../components/kit/core/img/products/002.jpg" />
+          </div>
+          <div class="cui__ecommerce__productThumb width-100 height-100 border m-2">
+            <img class="img-fluid" src="../../components/kit/core/img/products/003.jpg" />
+          </div>
+          <div class="cui__ecommerce__productThumb width-100 height-100 border m-2">
+            <img class="img-fluid" src="../../components/kit/core/img/products/004.jpg" />
+          </div>
+          <div class="cui__ecommerce__productThumb width-100 height-100 border m-2">
+            <img class="img-fluid" src="../../components/kit/core/img/products/002.jpg" />
+          </div>
+          <div class="cui__ecommerce__productThumb width-100 height-100 border m-2">
+            <img class="img-fluid" src="../../components/kit/core/img/products/003.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8">
+        <div class="font-size-24 font-weight-bold text-dark mb-2">
+          $199.28 <del class="align-text-top font-size-14">$299.28</del>
+        </div>
+        <div class="pb-3 mb-4 border-bottom">
+          <a href="javascript:void(0);" class="text-blue font-size-18">
+            TP-Link AC1750 Smart WiFi Router - Dual<br />
+            Band Gigabit Wireless Internet Routers for<br />
+            Home
+          </a>
+        </div>
+        <div class="mb-4 width-300">
+          <select class="select2">
+            <optgroup label="Group 1">
+              <option selected>Red</option>
+              <option>Blue</option>
+            </optgroup>
+            <optgroup label="Group 2">
+              <option>Black</option>
+              <option>Green</option>
+              <option>White</option>
+            </optgroup>
+          </select>
+        </div>
+        <a
+          href="javascript: void(0);"
+          class="width-200 btn btn-success btn-with-addon mr-auto mb-3 text-nowrap d-none d-md-block"
+        >
+          <span class="btn-addon">
+            <i class="btn-addon-icon fe fe-plus-circle"></i>
+          </span>
+          Add To Card
+        </a>
+        <div class="card-header p-0 mb-4">
+          <div class="d-flex align-items-stretch">
+            <ul
+              class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched"
+            >
+              <li class="nav-item">
+                <a
+                  class="nav-link py-3 active"
+                  href="#tab-information-content"
+                  data-toggle="tab"
+                  aria-selected="true"
+                  id="tab-information"
+                  >Information</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link py-3"
+                  href="#tab-description-content"
+                  data-toggle="tab"
+                  id="tab-description"
+                  >Description</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-content">
+          <div
+            class="tab-pane active"
+            id="tab-information-content"
+            role="tabpanel"
+            aria-labelledby="tab-information-content"
+          >
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into electronic typesetting,
+              remaining essentially unchanged.
+            </p>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+              has been the industry's standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cui__utils__heading">
+  <h5>Related Products</h5>
+</div>
+<div class="row">
+  <div class="col-lg-4">
+    @@include('src/components/kit/widgets/general/16/16.html')
+  </div>
+  <div class="col-lg-4">
+    @@include('src/components/kit/widgets/general/16/16.html')
+  </div>
+  <div class="col-lg-4">
+    @@include('src/components/kit/widgets/general/16/16.html')
+  </div>
+</div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "ECOMMERCE" module scripts
+
+  ;(function($) {
+    'use strict'
+    $(function() {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      $('.select2').select2()
+      $('.cui__ecommerce__productThumb').on('click', function() {
+        $('.cui__ecommerce__productMainImage img').attr(
+          'src',
+          $(this)
+            .find('img')
+            .attr('src'),
+        )
+        $('.cui__ecommerce__productThumb').removeClass('border-primary')
+        $(this).addClass('border-primary')
+      })
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

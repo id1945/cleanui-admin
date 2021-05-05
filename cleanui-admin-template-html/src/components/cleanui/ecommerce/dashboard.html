@@ -1,0 +1,140 @@
+<div class="cui__utils__heading">
+  <strong>Ecommerce: Dashboard</strong>
+</div>
+<div class="row">
+  <div class="col-xl-8 col-lg-12">
+    <div class="card">
+      <div class="card-header card-header-flex">
+        <div class="d-flex align-items-stretch">
+          <ul
+            class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#tab-orders-content"
+                data-toggle="tab"
+                id="tab-orders"
+                >Orders</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tab-revenue-content" data-toggle="tab" id="tab-revenue"
+                >Revenue</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <div
+          class="tab-pane"
+          id="tab-orders-content"
+          role="tabpanel"
+          aria-labelledby="tab-orders-content"
+        >
+          @@include('src/components/kit/widgets/chart/3/3.html')
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header card-header-flex">
+        <div class="d-flex align-items-stretch">
+          <ul
+            class="nav nav-tabs nav-tabs-line nav-tabs-line-bold nav-tabs-noborder nav-tabs-stretched"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="#tab-bestsellers-content"
+                data-toggle="tab"
+                id="tab-bestsellers"
+                >Bestsellers</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#tab-mostviewed-content"
+                data-toggle="tab"
+                id="tab-mostviewed"
+                >Most Viewed</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#tab-highrated-content" data-toggle="tab" id="tab-highrated"
+                >Highest Rated</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-lg-6">
+            @@include('src/components/kit/widgets/general/16/16.html')
+          </div>
+          <div class="col-lg-6">
+            @@include('src/components/kit/widgets/general/16/16.html')
+          </div>
+          <div class="col-lg-6">
+            @@include('src/components/kit/widgets/general/16/16.html')
+          </div>
+          <div class="col-lg-6">
+            @@include('src/components/kit/widgets/general/16/16.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4 col-lg-12">
+    <div class="card text-white bg-success">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/2-3/2-3.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/2/2.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/2-1/2-1.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/2-2/2-2.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/list/11/11.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/list/12/12.html')
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "ECOMMERCE" module scripts
+
+  ;(function($) {
+    'use strict'
+    $(function() {
+      /////////////////////////////////////////////////////////////////////////////////////////
+
+      $('.air__ecommerce__productFavorite').on('click', function() {
+        $(this).toggleClass('text-dark')
+      })
+
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

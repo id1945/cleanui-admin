@@ -1,0 +1,153 @@
+<div class="kit__utils__heading">
+  <h5>
+    <span class="mr-3">Date Picker</span>
+    <a
+      href="https://tempusdominus.github.io/bootstrap-4/Usage/"
+      target="_blank"
+      class="btn btn-sm btn-light"
+    >
+      Official Documentation
+      <i class="fe fe-corner-right-up"></i>
+    </a>
+  </h5>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="mb-4"><strong>Date Picker Only</strong></h5>
+        <div class="mb-5">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Select Date"
+              id="datepicker-only-init"
+              data-toggle="datetimepicker"
+              data-target="#datepicker-only-init"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h5 class="mb-4"><strong>Time Picker Only</strong></h5>
+        <div class="mb-5">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Select Time"
+              id="timepicker-init"
+              data-toggle="datetimepicker"
+              data-target="#timepicker-init"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="mb-4"><strong>Date & Time Picker</strong></h5>
+        <div class="mb-5">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Select Date"
+              id="datetimepicker-init"
+              data-toggle="datetimepicker"
+              data-target="#datetimepicker-init"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6">
+        <h5 class="mb-4"><strong>Inline Date Picker</strong></h5>
+        <div class="mb-5">
+          <div class="form-group">
+            <div id="datepicker-inline-init"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <h5 class="text-black"><strong>Inline Time Picker</strong></h5>
+        <div class="mb-5">
+          <div class="form-group">
+            <div id="timepicker-inline-init"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  ;(function($) {
+    'use strict'
+    $(function() {
+      $('#timepicker-init').datetimepicker({
+        icons: {
+          time: 'fa fa-clock-o',
+          date: 'fa fa-calendar',
+          up: 'fa fa-arrow-up',
+          down: 'fa fa-arrow-down',
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right',
+        },
+        format: 'LT',
+      })
+
+      $('#datepicker-only-init').datetimepicker({
+        icons: {
+          time: 'fa fa-clock-o',
+          date: 'fa fa-calendar',
+          up: 'fa fa-arrow-up',
+          down: 'fa fa-arrow-down',
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right',
+        },
+        format: 'LL',
+      })
+
+      $('#datetimepicker-init').datetimepicker({
+        icons: {
+          time: 'fa fa-clock-o',
+          date: 'fa fa-calendar',
+          up: 'fa fa-arrow-up',
+          down: 'fa fa-arrow-down',
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right',
+        },
+      })
+
+      $('#datepicker-inline-init').datetimepicker({
+        icons: {
+          time: 'fa fa-clock-o',
+          date: 'fa fa-calendar',
+          up: 'fa fa-arrow-up',
+          down: 'fa fa-arrow-down',
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right',
+        },
+        inline: true,
+        sideBySide: false,
+      })
+
+      $('#timepicker-inline-init').datetimepicker({
+        icons: {
+          time: 'fa fa-clock-o',
+          date: 'fa fa-calendar',
+          up: 'fa fa-arrow-up',
+          down: 'fa fa-arrow-down',
+          previous: 'fa fa-arrow-left',
+          next: 'fa fa-arrow-right',
+        },
+        format: 'LT',
+        inline: true,
+        sideBySide: false,
+      })
+    })
+  })(jQuery)
+</script>

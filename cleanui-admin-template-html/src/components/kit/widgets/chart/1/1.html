@@ -1,0 +1,53 @@
+<div class="d-flex flex-wrap mb-3">
+  <div class="width-50p">
+    <div class="font-size-18 text-dark font-weight-bold">
+      +$12,367.36 <span class="text-success font-size-12 align-text-top">+25%</span>
+    </div>
+    <div class="text-uppercase text-gray-4">Total sales</div>
+  </div>
+  <div class="width-50p">
+    <div class="font-size-18 text-dark font-weight-bold">
+      +$5,367.36 <span class="text-danger font-size-12 align-text-top">-76%</span>
+    </div>
+    <div class="text-uppercase text-gray-4">Avg. Per Day</div>
+  </div>
+</div>
+<div class="kit__c1__chart ct-chart height-300"></div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 1" module scripts
+
+  ; (function ($) {
+    'use strict'
+    $(function () {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      new Chartist.Bar(
+        '.kit__c1__chart',
+        {
+          series: [
+            {
+              className: 'ct-series-n',
+              data: [10, 40, 30, 30, 55, 25],
+            },
+            {
+              className: 'ct-series-a',
+              data: [20, 60, 50, 45, 50, 60],
+            },
+          ],
+        },
+        {
+          seriesBarDistance: 10,
+          horizontalBars: true,
+          axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          plugins: [Chartist.plugins.tooltip()],
+        },
+      )
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

@@ -1,0 +1,28 @@
+@import 'src/components/mixins';
+
+.kit__g10 {
+  &__btn {
+    overflow: hidden;
+    position: relative;
+    padding-left: rem(50) !important;
+    border: none;
+  }
+
+  &__btnAddon {
+    position: absolute;
+    z-index: 1;
+    top: -1px;
+    left: -1px;
+    bottom: -1px;
+    background-color: rgba($white, 0.2);
+    width: rem(40);
+  }
+
+  &__btnAddonIcon {
+    font-size: rem(16);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

@@ -1,0 +1,70 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  JQUERY TYPEAHED (AUTOCOMPLETE) */
+
+.typeahead__container {
+  position: relative;
+  color: $success;
+
+  .typeahead__field {
+    position: relative;
+    z-index: 1;
+  }
+  .typeahead__result {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: calc(100% + 2px);
+    width: 100%;
+
+    .typeahead__list {
+      background: $white;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      border: 1px solid $gray-3;
+      border-radius: 0 0 3px 3px;
+
+      .typeahead__item {
+        a {
+          display: block;
+          padding: 6px 16px;
+          color: $text;
+          transition: none;
+        }
+        &.active {
+          a {
+            background: $gray-4;
+          }
+        }
+        &:hover {
+          a {
+            background: $primary;
+            color: $white;
+          }
+        }
+        strong {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+  &.result {
+    .typeahead__result {
+      display: block;
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .typeahead__container {
+    .typeahead__result {
+      .typeahead__list {
+        background: $dark-gray-6;
+        border-color: $dark-gray-4;
+      }
+    }
+  }
+}

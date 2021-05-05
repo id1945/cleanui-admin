@@ -1,0 +1,94 @@
+<div class="kit__c3__chart height-300"></div>
+<div class="d-flex flex-wrap">
+  <div class="mr-5 mb-2">
+    <div class="text-nowrap text-uppercase text-gray-4">
+      <div class="kit__c3__donut kit__c3__donut--success"></div>
+      Gross revenue
+    </div>
+    <div class="font-weight-bold font-size-18 text-dark">+$125,367.36</div>
+  </div>
+  <div class="mr-5 mb-2">
+    <div class="text-nowrap text-uppercase text-gray-4">
+      <div class="kit__c3__donut kit__c3__donut--primary"></div>
+      Gross Earnings
+    </div>
+    <div class="font-weight-bold font-size-18 text-dark">+$125,367.36</div>
+  </div>
+</div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 3" module scripts
+
+  ; (function ($) {
+    'use strict'
+    $(function () {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      const chartist3 = new Chartist.Bar(
+        '.kit__c3__chart',
+        {
+          labels: [
+            'Jan',
+            'Feb',
+            'Mar',
+            'Apr',
+            'May',
+            'Jun',
+            'Jul',
+            'Aug',
+            'Sep',
+            'Oct',
+            'Nov',
+            'Dec',
+          ],
+          series: [
+            {
+              className: 'ct-series-a',
+              data: [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+            },
+            {
+              className: 'ct-series-b',
+              data: [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4],
+            },
+          ],
+        },
+        {
+          fullWidth: true,
+          chartPadding: {
+            right: 0,
+            left: 0,
+            top: 5,
+            bottom: 0,
+          },
+          low: 0,
+          axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          axisX: {
+            showGrid: false,
+          },
+          seriesBarDistance: 15,
+          plugins: [Chartist.plugins.tooltip()],
+        },
+      )
+
+      chartist3.on('draw', function (data) {
+        if (data.type === 'bar') {
+          data.group.append(
+            new Chartist.Svg('line', {
+              x1: data.x1,
+              x2: data.x2,
+              y1: data.y2,
+              y2: 0,
+              stroke: '#e4e9f0',
+              'stroke-width': '10',
+            }),
+          )
+        }
+      })
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

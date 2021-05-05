@@ -1,0 +1,40 @@
+@import 'src/components/mixins';
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/* BREADCRUMBS */
+
+.cui__breadcrumbs {
+  padding: rem(20) rem(30) 0;
+  font-size: rem(17);
+
+  &__current {
+    color: $black;
+  }
+
+  &__arrow {
+    display: inline-block;
+    margin: 0 rem(10);
+    &:after {
+      display: inline-block;
+      content: '·';
+      color: $gray-5;
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .cui__breadcrumbs {
+    color: $dark-gray-1;
+
+    &__current {
+      color: $white;
+    }
+
+    &__arrow {
+      &:after {
+        color: $dark-gray-1;
+      }
+    }
+  }
+}

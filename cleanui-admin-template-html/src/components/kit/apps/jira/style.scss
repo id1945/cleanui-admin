@@ -1,0 +1,65 @@
+@import 'src/components/mixins';
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/* JIRA */
+
+.kit {
+  &__jira {
+    &__agile {
+      &__boardCards {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      &__card {
+        background-color: $white;
+        border-radius: 3px;
+        box-shadow: 0 3px 5px rgba(22, 22, 53, 0.16);
+        margin-bottom: rem(15);
+        padding: rem(5);
+        min-height: rem(40);
+        cursor: move;
+      }
+
+      &__cardContent {
+        padding-left: rem(15);
+        position: relative;
+      }
+
+      &__cardFlag {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background-color: $gray-3;
+        width: 3px;
+        border-radius: 2px;
+      }
+
+      &__emptyBoard {
+        border: 1px dashed $gray-4;
+        min-height: rem(80);
+        background-color: $gray-1;
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .kit {
+    &__jira {
+      &__agile {
+        &__card {
+          background: $dark-gray-4;
+        }
+        &__emptyBoard {
+          background: transparent;
+          border-color: $dark-gray-4;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,391 @@
+<div class="cui__topbar">
+  <div class="mr-4">
+    <a href="javascript: void(0);" class="mr-2">
+      <i
+        class="dropdown-toggle-icon fe fe-home"
+        data-toggle="tooltip"
+        data-placement="bottom"
+        title="Dashboard Alpha"
+      ></i>
+    </a>
+    <a href="javascript: void(0);" class="mr-2">
+      <i
+        class="dropdown-toggle-icon fe fe-home"
+        data-toggle="tooltip"
+        data-placement="bottom"
+        title="Dashboard Beta"
+      ></i>
+    </a>
+    <span class="dropdown">
+      <a
+        href=""
+        class="dropdown-toggle text-nowrap"
+        data-toggle="dropdown"
+        aria-expanded="false"
+        data-offset="0,15"
+      >
+        <i
+          class="dropdown-toggle-icon fe fe-star"
+          data-toggle="tooltip"
+          data-placement="bottom"
+          title="Bookmarks"
+        ></i>
+      </a>
+      <div class="dropdown-menu" role="menu">
+        <div class="card-body p-1 cui__topbar__favs">
+          <div class="px-2 pb-2 pt-0">
+            <input class="form-control" type="text" placeholder="Find pages..." />
+          </div>
+          <div class="kit__customScroll height-200">
+            <div class="px-2 pb-2">
+              <a href="./dashboards-alpha.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon cui__topbar__favs__setIconActive">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-home"></i>
+                  Dashboard Alpha
+                </span>
+              </a>
+              <a href="./dashboards-beta.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon cui__topbar__favs__setIconActive">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-home"></i>
+                  Dashboard Beta
+                </span>
+              </a>
+              <a href="./dashboards-gamma.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-home"></i>
+                  Dashboard Gamma
+                </span>
+              </a>
+              <a href="./dashboards-crypto.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-home"></i>
+                  Dashboard Crypto
+                </span>
+              </a>
+              <a href="./apps-profile.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-database"></i>
+                  Profile
+                </span>
+              </a>
+              <a href="./apps-calendar.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-database"></i>
+                  Calendar
+                </span>
+              </a>
+              <a href="./apps-gallery.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-database"></i>
+                  Gallery
+                </span>
+              </a>
+              <a href="./apps-messaging.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-database"></i>
+                  Messaging
+                </span>
+              </a>
+              <a href="./apps-mail.html" class="cui__topbar__favs__link">
+                <div class="cui__topbar__favs__setIcon">
+                  <i class="fe fe-star"></i>
+                </div>
+                <span>
+                  <i class="mr-2 fe fe-database"></i>
+                  Mail
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+  </div>
+  <div class="mr-auto">
+    <div class="cui__topbar__search">
+      <i class="fe fe-search"> <!-- --></i>
+      <input type="text" id="livesearch__input" placeholder="Type to search..." />
+    </div>
+    <div class="cui__topbar__livesearch">
+      <button class="cui__topbar__livesearch__close" type="button">
+        <i class="icmn-cross"></i>
+      </button>
+      <div class="container-fluid">
+        <div class="cui__topbar__livesearch__wrapper">
+          <input
+            type="text"
+            id="livesearch__input__inner"
+            class="cui__topbar__livesearch__input"
+            placeholder="Type to search..."
+          />
+          <ul class="cui__topbar__livesearch__options">
+            <li class="cui__topbar__livesearch__option">
+              <label class="kit__utils__control kit__utils__control__checkbox">
+                <input type="checkbox" checked="checked" />
+                <span class="kit__utils__control__indicator"></span>
+                Search within page
+              </label>
+            </li>
+            <li class="cui__topbar__livesearch__option">Press enter to search</li>
+          </ul>
+          <div class="cui__topbar__livesearch__results">
+            <div class="cui__topbar__livesearch__results__title">
+              <span>Pages Search Results</span>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="cui__topbar__livesearch__result__content">
+                  <div
+                    class="cui__topbar__livesearch__result__thumb"
+                    style="background-image: url('../../components/kit/core/img/content/photos/1.jpeg')"
+                  >
+                    #1
+                  </div>
+                  <div class="cui__topbar__livesearch__result">
+                    <div class="cui__topbar__livesearch__result__text">
+                      Samsung Galaxy A50 4GB/64GB
+                    </div>
+                    <div class="cui__topbar__livesearch__result__source">In some partition</div>
+                  </div>
+                </div>
+                <div class="cui__topbar__livesearch__result__content">
+                  <div
+                    class="cui__topbar__livesearch__result__thumb"
+                    style="background-image: url('../../components/kit/core/img/content/photos/2.jpeg')"
+                  >
+                    KF
+                  </div>
+                  <div class="cui__topbar__livesearch__result">
+                    <div class="cui__topbar__livesearch__result__text">
+                      Apple iPhone 11 64GB
+                    </div>
+                    <div class="cui__topbar__livesearch__result__source">In some partition</div>
+                  </div>
+                </div>
+                <div class="cui__topbar__livesearch__result__content">
+                  <div
+                    class="cui__topbar__livesearch__result__thumb"
+                    style="background-image: url('../../components/kit/core/img/content/photos/3.jpeg')"
+                  >
+                    GF
+                  </div>
+                  <div class="cui__topbar__livesearch__result">
+                    <div class="cui__topbar__livesearch__result__text">
+                      Samsung Galaxy A51 SM-A515F/DS 4GB/64GB
+                    </div>
+                    <div class="cui__topbar__livesearch__result__source">In some partition</div>
+                  </div>
+                </div>
+                <div class="cui__topbar__livesearch__result__content">
+                  <div
+                    class="cui__topbar__livesearch__result__thumb"
+                    style="background-image: url('../../components/kit/core/img/content/photos/4.jpeg')"
+                  >
+                    GF
+                  </div>
+                  <div class="cui__topbar__livesearch__result">
+                    <div class="cui__topbar__livesearch__result__text">
+                      Xiaomi Redmi 8 4GB/64GB
+                    </div>
+                    <div class="cui__topbar__livesearch__result__source">In some partition</div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="cui__topbar__livesearch__result__content">
+                  <div class="cui__topbar__livesearch__result__thumb">01</div>
+                  <div class="cui__topbar__livesearch__result">
+                    <div class="cui__topbar__livesearch__result__text">
+                      White Case
+                    </div>
+                    <div class="cui__topbar__livesearch__result__source">In some partition</div>
+                  </div>
+                </div>
+                <div class="cui__topbar__livesearch__result__content">
+                  <div class="cui__topbar__livesearch__result__thumb">02</div>
+                  <div class="cui__topbar__livesearch__result">
+                    <div class="cui__topbar__livesearch__result__text">
+                      Blue Case
+                    </div>
+                    <div class="cui__topbar__livesearch__result__source">In some partition</div>
+                  </div>
+                </div>
+                <div class="cui__topbar__livesearch__result__content">
+                  <div class="cui__topbar__livesearch__result__thumb">03</div>
+                  <div class="cui__topbar__livesearch__result">
+                    <div class="cui__topbar__livesearch__result__text">
+                      Green Case
+                    </div>
+                    <div class="cui__topbar__livesearch__result__source">In some partition</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="dropdown mr-4 d-none d-md-block">
+    <a
+      href=""
+      class="dropdown-toggle text-nowrap"
+      data-toggle="dropdown"
+      aria-expanded="false"
+      data-offset="0,15"
+    >
+      <i class="dropdown-toggle-icon fe fe-folder"></i>
+      <span class="dropdown-toggle-text d-none d-xl-inline">Issues History</span>
+    </a>
+    <div class="dropdown-menu" role="menu">
+      <a class="dropdown-item" href="javascript:void(0)">Current search</a>
+      <a class="dropdown-item" href="javascript:void(0)">Search for issues</a>
+      <div class="dropdown-divider"></div>
+      <div class="dropdown-header">Opened</div>
+      <a class="dropdown-item" href="javascript:void(0)"
+        ><i class="fe fe-check-circle mr-2"></i> CLNUI-253 Project implemen...
+      </a>
+      <a class="dropdown-item" href="javascript:void(0)"
+        ><i class="fe fe-check-circle mr-2"></i> CLNUI-234 Active history iss...
+      </a>
+      <a class="dropdown-item" href="javascript:void(0)"
+        ><i class="fe fe-check-circle mr-2"></i> CLNUI-424 Ionicons intergrat...
+      </a>
+      <a class="dropdown-item" href="javascript:void(0)">More...</a>
+      <div class="dropdown-header">Filters</div>
+      <a class="dropdown-item" href="javascript:void(0)">My open issues</a>
+      <a class="dropdown-item" href="javascript:void(0)">Reported by me</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="javascript:void(0)">
+        <i class="dropdown-icon fe fe-settings"></i>
+        Settings
+      </a>
+    </div>
+  </div>
+  <div class="dropdown mb-0 mr-auto d-xl-block d-none">
+    <a
+      href=""
+      class="dropdown-toggle text-nowrap"
+      data-toggle="dropdown"
+      aria-expanded="false"
+      data-offset="0,15"
+    >
+      <i class="dropdown-toggle-icon fe fe-database"></i>
+      <span class="dropdown-toggle-text">Project Management</span>
+    </a>
+    <div class="dropdown-menu" role="menu">
+      <div class="dropdown-header">Active</div>
+      <a class="dropdown-item" href="javascript:void(0)">Project Management</a>
+      <a class="dropdown-item" href="javascript:void(0)">User Inetrface Development</a>
+      <a class="dropdown-item" href="javascript:void(0)">Documentation</a>
+      <div class="dropdown-header">Inactive</div>
+      <a class="dropdown-item" href="javascript:void(0)">Marketing</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="javascript:void(0)">
+        <i class="dropdown-icon fe fe-settings"></i>
+        Settings
+      </a>
+    </div>
+  </div>
+  <div class="dropdown mr-4 d-none d-sm-block">
+    <a href="" class="dropdown-toggle text-nowrap" data-toggle="dropdown" data-offset="5,15">
+      <span class="dropdown-toggle-text">EN</span>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" role="menu">
+      <a class="dropdown-item " href="javascript:void(0)"
+        ><span class="text-uppercase font-size-12 mr-1">EN</span> English</a
+      >
+      <a class="dropdown-item" href="javascript:void(0)"
+        ><span class="text-uppercase font-size-12 mr-1">FR</span> French</a
+      >
+      <a class="dropdown-item" href="javascript:void(0)"
+        ><span class="text-uppercase font-size-12 mr-1">RU</span> Русский</a
+      >
+      <a class="dropdown-item" href="javascript:void(0)"
+        ><span class="text-uppercase font-size-12 mr-1">CN</span> 简体中文</a
+      >
+    </div>
+  </div>
+  <div class="cui__topbar__actionsDropdown dropdown mr-4 d-none d-sm-block">
+    <a
+      href=""
+      class="dropdown-toggle text-nowrap"
+      data-toggle="dropdown"
+      aria-expanded="false"
+      data-offset="0,15"
+    >
+      <i class="dropdown-toggle-icon fe fe-bell"></i>
+    </a>
+    <div class="cui__topbar__actionsDropdownMenu dropdown-menu dropdown-menu-right" role="menu">
+      <div style="width: 350px;">
+        @@include('src/components/kit/widgets/list/2/2.html')
+      </div>
+    </div>
+  </div>
+  <div class="dropdown">
+    <a
+      href=""
+      class="dropdown-toggle text-nowrap"
+      data-toggle="dropdown"
+      aria-expanded="false"
+      data-offset="5,15"
+    >
+      <img
+        class="dropdown-toggle-avatar"
+        src="../../components/kit/core/img/avatars/avatar-2.png"
+        alt="User avatar"
+      />
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" role="menu">
+      <a class="dropdown-item" href="javascript:void(0)">
+        <i class="dropdown-icon fe fe-user"></i>
+        Profile
+      </a>
+      <div class="dropdown-divider"></div>
+      <div class="dropdown-header">
+        Home
+      </div>
+      <a class="dropdown-item" href="javascript:void(0)">
+        <i class="dropdown-icon fe fe-chevron-right"></i>
+        System Dashboard
+      </a>
+      <a class="dropdown-item" href="javascript:void(0)">
+        <i class="dropdown-icon fe fe-chevron-right"></i>
+        User Boards
+      </a>
+      <a class="dropdown-item" href="javascript:void(0)">
+        <i class="dropdown-icon fe fe-chevron-right"></i>
+        Issue Navigator
+        <span class="badge badge-success font-size-11 ml-2">25 New</span>
+      </a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="javascript:void(0)">
+        <i class="dropdown-icon fe fe-log-out"></i> Logout
+      </a>
+    </div>
+  </div>
+</div>

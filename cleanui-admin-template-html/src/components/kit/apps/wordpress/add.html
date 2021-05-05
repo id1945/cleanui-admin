@@ -1,0 +1,99 @@
+<div class="card">
+  <div class="card-body">
+    <form action="#">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group mb-4">
+            <label class="text-dark text-uppercase font-weight-bold" for="input-post-title"
+              >Post Title</label
+            >
+            <input
+              type="text"
+              class="form-control"
+              id="input-post-title"
+              placeholder="Enter post title"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="form-group mb-4">
+        <label class="text-dark text-uppercase font-weight-bold">Post Type</label>
+        <div class="d-flex flex-wrap">
+          <label class="kit__utils__control kit__utils__control__checkbox mr-3">
+            <input type="checkbox" name="radio" checked="checked" />
+            <span class="kit__utils__control__indicator"></span>
+            Text
+          </label>
+          <label class="kit__utils__control kit__utils__control__checkbox mr-3">
+            <input type="checkbox" name="radio" />
+            <span class="kit__utils__control__indicator"></span>
+            Video
+          </label>
+          <label class="kit__utils__control kit__utils__control__checkbox mr-3">
+            <input type="checkbox" name="radio" />
+            <span class="kit__utils__control__indicator"></span>
+            Image
+          </label>
+          <label class="kit__utils__control kit__utils__control__checkbox mr-3">
+            <input type="checkbox" name="radio" />
+            <span class="kit__utils__control__indicator"></span>
+            Audio
+          </label>
+          <label class="kit__utils__control kit__utils__control__checkbox mr-3">
+            <input type="checkbox" name="radio" />
+            <span class="kit__utils__control__indicator"></span>
+            Vimeo
+          </label>
+        </div>
+      </div>
+      <div class="form-group mb-4">
+        <div>
+          <label class="text-dark text-uppercase font-weight-bold">Description</label>
+          <div class="kit__wordpress__postContent"></div>
+        </div>
+      </div>
+      <div class="form-group mb-4">
+        <label class="text-dark text-uppercase font-weight-bold">Post Category</label>
+        <select class="kit__wordpress__categorySelect" multiple>
+          <option selected>Travel</option>
+          <option>Music</option>
+          <option selected>Nature</option>
+          <option>Cars</option>
+          <option selected>Video</option>
+        </select>
+      </div>
+      <div class="form-group mb-4">
+        <label class="text-dark text-uppercase font-weight-bold">File Uploads</label>
+        <input type="file" class="dropify" data-height="170" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-success btn-with-addon text-nowrap">
+          <span class="btn-addon">
+            <i class="btn-addon-icon fe fe-plus-circle"></i>
+          </span>
+          Add Post
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "WORDPRESS" module scripts
+
+  ;(function($) {
+    'use strict'
+    $(function() {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      $(document).ready(function() {
+        $('.kit__wordpress__postContent').summernote({
+          height: 200,
+        })
+        $('.kit__wordpress__categorySelect').select2()
+        $('.dropify').dropify()
+      })
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

@@ -1,0 +1,319 @@
+<div class="row">
+  <div class="col-xl-12">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            @@include('src/components/kit/widgets/chart/12/12.html')
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            @@include('src/components/kit/widgets/chart/12-1/12-1.html')
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xl-4">
+    <div class="card">
+      @@include('src/components/kit/widgets/general/13-1/13-1.html')
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/5-1/5-1.html')
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="card">
+      <div class="card-header border-0 pb-0">
+        <div class="cui__utils__heading mb-0">
+          <strong>RECENT INVITES</strong>
+        </div>
+      </div>
+      <div class="card-body">
+        @@include('src/components/kit/widgets/list/10/10.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/2/2.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/2-1/2-1.html')
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-body">
+        @@include('src/components/kit/widgets/general/2-2/2-2.html')
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="card">
+          <div class="card-header border-0 pb-0">
+            <div class="cui__utils__heading mb-0">
+              <strong>Inbound Bandwidth</strong>
+            </div>
+          </div>
+          <div class="card-body">
+            <strong class="font-size-36 text-dark">246Gb</strong>
+          </div>
+          <div class="cui-graph-card-chartistArea-1 chartist height-250"></div>
+        </div>
+      </div>
+      <div class="col-xl-12">
+        <div class="graphCard card">
+          <div class="card-header border-0 pb-0">
+            <div class="cui__utils__heading mb-0">
+              <strong>Outbound Bandwidth</strong>
+            </div>
+          </div>
+          <div class="card-body">
+            <strong class="font-size-36 text-dark">52Gb</strong>
+          </div>
+          <div class="cui-graph-card-chartistArea-2 chartist height-250"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header border-0 pb-0">
+        <div class="cui__utils__heading mb-0">
+          <strong class="text-uppercase font-size-16">Support cases</strong>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-xl-6">
+            <div class="mb-3">
+              <table class="table cui-graph-card-table">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th class="font-weight-bold text-right">Amount</th>
+                  </tr>
+                </thead>
+                <tr>
+                  <td>EPS</td>
+                  <td class="text-primary font-weight-bold text-right">+12,42%</td>
+                </tr>
+                <tr>
+                  <td>PDO</td>
+                  <td class="text-primary font-weight-bold text-right">21,700</td>
+                </tr>
+                <tr>
+                  <td>OPL Status</td>
+                  <td class="text-danger font-weight-bold text-right">Negative</td>
+                </tr>
+                <tr>
+                  <td>Priority</td>
+                  <td class="text-primary font-weight-bold text-right">+235,200</td>
+                </tr>
+                <tr>
+                  <td>Net Prifit</td>
+                  <td class="text-primary font-weight-bold text-right">$19,235,516</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <div class="h-100 d-flex flex-column justify-content-center align-items-center">
+              <div class="mb-4">
+                <div class="cui-graph-card-donut-chartist-area-1 ct-chart-pie mb-3"></div>
+              </div>
+              <div class="text-center mb-4">
+                <span class="mr-2">
+                  <span class="kit__utils__donut kit__utils__donut--success"></span>
+                  Ready
+                </span>
+                <span class="mr-2">
+                  <span class="kit__utils__donut kit__utils__donut--primary"></span>
+                  In Progress
+                </span>
+                <span class="mr-2">
+                  <span class="kit__utils__donut kit__utils__donut--danger"></span>
+                  Defected
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="card">
+      <div class="card-header border-0 pb-0">
+        <div class="cui__utils__heading mb-0">
+          <strong class="text-uppercase font-size-16">Finance Stats</strong>
+        </div>
+      </div>
+      <div class="card-body">
+        @@include('src/components/kit/widgets/list/11/11.html')
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  ;(function($) {
+    'use strict'
+    var chart = new Chartist.Pie(
+      '.cui-graph-card-donut-chartist-area-1',
+      {
+        labels: ['Ready', 'In Progress', 'Defected'],
+        series: [90, 35, 18],
+      },
+      {
+        donut: true,
+        donutWidth: 25,
+        labelInterpolationFnc: function(value, index) {
+          var total = chart.data.series.reduce(function(pv, cv) {
+            return pv + cv
+          }, 0)
+          return Math.round((chart.data.series[index] / total) * 100) + '%'
+        },
+      },
+    )
+    chart.on('draw', function(ctx) {
+      if (ctx.type === 'label') {
+        ctx.element.addClass('ct-label-pie')
+        ctx.element.attr({
+          dx: ctx.element.root().width() / 2,
+          dy: ctx.element.root().height() / 2,
+          id: 'ct-label-pie-' + ctx.index,
+        })
+      } else if (ctx.type === 'slice') {
+        ctx.element.attr({
+          id: 'ct-slice-pie-' + ctx.index,
+        })
+      }
+    })
+
+    $(document).on('mouseenter', '.ct-slice-donut', function() {
+      $(this).css({
+        opacity: '0.8',
+      })
+      var index = $(this)
+        .attr('id')
+        .slice(-1)
+      $('.ct-label-pie').css({
+        display: 'none',
+      })
+      $('#ct-label-pie-' + index).css({
+        display: 'block',
+      })
+    })
+
+    $(document).on('mouseleave', '.ct-slice-donut', function() {
+      $(this).css({
+        opacity: '1',
+      })
+    })
+
+    new Chartist.Line(
+      '.cui-graph-card-chartistArea-1',
+      {
+        series: [[232, 111, 138, 144, 118, 210, 236]],
+      },
+      {
+        lineSmooth: Chartist.Interpolation.none({
+          fillHoles: false,
+        }),
+        height: '250px',
+
+        showPoint: true,
+        showLine: true,
+        showArea: true,
+        fullWidth: true,
+        showLabel: false,
+        axisX: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0,
+        },
+        axisY: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0,
+        },
+        chartPadding: 0,
+        low: 0,
+        plugins: [Chartist.plugins.tooltip()],
+      },
+    )
+
+    new Chartist.Line(
+      '.cui-graph-card-chartistArea-2',
+      {
+        series: [[3, 14, 37, 26, 48, 8, 63, 21, 24, 52]],
+      },
+      {
+        lineSmooth: Chartist.Interpolation.none({
+          fillHoles: false,
+        }),
+        height: '250px',
+
+        showPoint: true,
+        showLine: true,
+        showArea: true,
+        fullWidth: true,
+        showLabel: false,
+        axisX: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0,
+        },
+        axisY: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0,
+        },
+        chartPadding: 0,
+        low: 0,
+        plugins: [Chartist.plugins.tooltip()],
+      },
+    )
+    new Chartist.Line(
+      '.cui-graph-card-chartistArea-3',
+      {
+        series: [[51, 8, 50, 45, 95, 90, 43, 13, 37, 52]],
+      },
+      {
+        height: '250px',
+
+        showPoint: true,
+        showLine: true,
+        showArea: true,
+        fullWidth: true,
+        showLabel: false,
+        axisX: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0,
+        },
+        axisY: {
+          showGrid: false,
+          showLabel: false,
+          offset: 0,
+        },
+        chartPadding: 0,
+        low: 0,
+        plugins: [Chartist.plugins.tooltip()],
+      },
+    )
+  })(jQuery)
+</script>

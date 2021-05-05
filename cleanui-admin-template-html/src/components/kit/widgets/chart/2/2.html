@@ -1,0 +1,54 @@
+<div class="card-body">
+  <div class="text-dark font-size-18 font-weight-bold mb-1">Year Profit</div>
+  <div class="text-gray-6 mb-2">Revenue by location and date</div>
+  <div class="font-weight-bold font-size-36 text-dark">$437,246.00</div>
+</div>
+<div class="kit__c2__chart height-200 ct-hidden-points"></div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 2" module scripts
+
+  ; (function ($) {
+    'use strict'
+    $(function () {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      new Chartist.Line(
+        '.kit__c2__chart',
+        {
+          series: [
+            {
+              className: 'ct-series-d',
+              data: [5, 9, 7, 8, 5, 3, 5, 4],
+            },
+          ],
+        },
+        {
+          low: 0,
+          chartPadding: {
+            right: 0,
+            left: 0,
+            top: 0,
+            bottom: 0,
+          },
+          fullWidth: true,
+          showPoint: true,
+          lineSmooth: false,
+          axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          axisX: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          showArea: true,
+          plugins: [Chartist.plugins.tooltip()],
+        },
+      )
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

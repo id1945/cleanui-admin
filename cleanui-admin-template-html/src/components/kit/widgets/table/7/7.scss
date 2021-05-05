@@ -1,0 +1,36 @@
+@import 'src/components/mixins';
+
+.kit__t7 {
+  &__textDivider {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    &::before,
+    &::after {
+      content: '';
+      height: 1px;
+      width: 100%;
+      background-color: $gray-2;
+    }
+
+    &__content {
+      flex-shrink: 0;
+      padding-left: rem(24);
+      padding-right: rem(24);
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .kit__t7 {
+    &__textDivider {
+      &::before,
+      &::after {
+        background-color: $dark-gray-4;
+      }
+    }
+  }
+}

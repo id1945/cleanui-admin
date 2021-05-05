@@ -1,0 +1,55 @@
+<div class="text-dark font-size-18 font-weight-bold mb-1">Year Profit</div>
+<div class="text-gray-6 mb-2">Revenue by location and date</div>
+<div class="kit__c5__chart height-200"></div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 5" module scripts
+
+  ; (function ($) {
+    'use strict'
+    $(function () {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      new Chartist.Bar(
+        '.kit__c5__chart',
+        {
+          series: [
+            {
+              className: 'ct-series-b',
+              data: [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8, 6, 7],
+            },
+            {
+              className: 'ct-series-m',
+              data: [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4, 3, 9],
+            },
+          ],
+        },
+        {
+          stackBars: true,
+          fullWidth: true,
+          chartPadding: {
+            right: 0,
+            left: 0,
+            top: 5,
+            bottom: 0,
+          },
+          low: 0,
+          axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          axisX: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          seriesBarDistance: 5,
+          plugins: [Chartist.plugins.tooltip()],
+        },
+      )
+
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

@@ -1,0 +1,54 @@
+@import 'src/components/mixins';
+
+.kit__l15 {
+  &__item {
+    border-bottom: 1px solid $gray-2;
+
+    &:first-child {
+      .kit__l15__itemLink {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+
+      .kit__l15__itemLink {
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__itemLink {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    color: inherit;
+    padding-top: rem(30);
+    padding-bottom: rem(25);
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+
+  &__itemCover {
+    width: rem(73);
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .kit__l15 {
+    &__item {
+      border-bottom: 1px solid $dark-gray-4;
+    }
+  }
+}

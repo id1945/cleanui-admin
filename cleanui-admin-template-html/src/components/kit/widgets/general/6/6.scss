@@ -1,0 +1,29 @@
+@import 'src/components/mixins';
+
+.kit__g6 {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+
+  &__status {
+    position: absolute;
+    top: -1px;
+    bottom: -1px;
+    left: -1px;
+    width: 6px;
+    z-index: 1;
+  }
+
+  &__footer {
+    background: $gray-1;
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .kit__g6 {
+    &__footer {
+      background: $dark-gray-4;
+    }
+  }
+}

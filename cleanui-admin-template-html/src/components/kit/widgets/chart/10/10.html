@@ -1,0 +1,91 @@
+<div class="text-dark font-size-18 font-weight-bold mb-1">Profit Change</div>
+<div class="text-gray-6 mb-2">Revenue by location and date</div>
+<div class="kit__c10__chartContainer d-flex flex-wrap align-items-center">
+  <div class="mr-3 mt-3 mb-3 position-relative">
+    <canvas class="kit__c10__chart" width="140" height="140"></canvas>
+    <div class="kit__c10__chartTooltip text-center" id="chart10-tooltip">
+      <div class="kit__c10__tooltipLabel font-size-14 font-weight-bold text-dark"></div>
+      <div class="kit__c10__tooltipValue font-size-14 text-dark"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 10" module scripts
+
+  ;(function($) {
+    'use strict'
+    $(function() {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      const chart10 = new Chart(document.getElementsByClassName('kit__c10__chart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Boston', 'Gravity Falls', 'Paris'],
+          datasets: [
+            {
+              data: [55, 15, 30],
+              backgroundColor: ['#46be8a', '#fb434a', '#1b55e3'],
+              borderColor: '#fff',
+              borderWidth: 2,
+              hoverBorderWidth: 0,
+              borderAlign: 'inner',
+            },
+          ],
+        },
+        options: {
+          animation: false,
+          responsive: true,
+          cutoutPercentage: 70,
+          legend: {
+            display: false,
+          },
+          legendCallback: function(chart) {
+            let text = []
+            text.push('<div class="kit__c10__chartLegend flex-shrink-0">')
+            for (let i = 0; i < chart.data.labels.length; i++) {
+              const label = chart.data.labels[i]
+              const tabletBg = chart.data.datasets[0].backgroundColor[i]
+              text.push(
+                '<div class="d-flex align-items-center flex-nowrap mt-2 mb-2"><div class="kit__c10__tablet mr-3" style="background-color:' +
+                  tabletBg +
+                  '"></div>' +
+                  label +
+                  '</div>',
+              )
+            }
+            text.push('</div>')
+            text = $(text.join(''))
+            return text
+          },
+          tooltips: {
+            enabled: false,
+            custom: function(tooltip) {
+              const tooltipEl = document.getElementById('chart10-tooltip')
+              // Hide if no tooltip
+              if (tooltip.opacity === 0) {
+                tooltipEl.style.opacity = 0
+                return
+              }
+
+              if (tooltip.body) {
+                const label = tooltip.body[0].lines[0].split(':')[0]
+                const value = this._data.datasets[tooltip.dataPoints[0].datasetIndex].data[
+                  tooltip.dataPoints[0].index
+                ].toLocaleString()
+                tooltipEl.querySelector('.kit__c10__tooltipLabel').innerHTML = label
+                tooltipEl.querySelector('.kit__c10__tooltipValue').innerHTML = value
+              }
+
+              tooltipEl.style.opacity = 1
+              tooltipEl.style.padding = tooltip.yPadding + 'px ' + tooltip.xPadding + 'px'
+            },
+          },
+        },
+      })
+      const chart10Legend = chart10.generateLegend()
+      $('.kit__c10__chartContainer').append(chart10Legend[0])
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

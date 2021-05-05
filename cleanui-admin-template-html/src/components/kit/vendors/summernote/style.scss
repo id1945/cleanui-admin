@@ -1,0 +1,126 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  TEXT-EDITOR */
+
+.note-popover {
+  display: none;
+  margin-top: 5px;
+}
+
+.note-editor {
+  border-color: $border !important;
+  border-radius: 3px;
+  .note-codable {
+    outline: none;
+    background: lighten($black, 3%) !important;
+  }
+  .note-resizebar {
+    background: $white !important;
+    padding: 2px 0 3px !important;
+    height: 12px !important;
+    border-radius: 0 0 3px 3px;
+  }
+  .note-statusbar {
+    border-color: $border !important;
+  }
+  .panel-heading {
+    padding: 0 5px;
+  }
+  .note-btn {
+    background: $light;
+    border-color: $light;
+    color: $text !important;
+
+    &:hover {
+      background: darken($light, 6%);
+      border-color: darken($light, 6%);
+    }
+  }
+  .note-btn-group {
+    .dropdown-menu {
+      padding: 5px 10px;
+      blockquote {
+        padding: 5px 10px;
+      }
+    }
+  }
+  .note-popover .popover-content .note-color .dropdown-menu,
+  .panel-heading.note-toolbar .note-color .dropdown-menu {
+    min-width: 355px;
+  }
+  .note-popover .popover-content .note-para .dropdown-menu,
+  .panel-heading.note-toolbar .note-para .dropdown-menu {
+    min-width: 230px;
+  }
+  .note-popover .popover-content .dropdown-menu,
+  .panel-heading.note-toolbar .note-fontname .dropdown-menu {
+    min-width: 140px;
+  }
+  .note-color-reset {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 1px !important;
+    background: $default !important;
+    color: $white !important;
+  }
+  .dropdown-toggle {
+    padding-right: 4px;
+    &:after {
+      display: none;
+    }
+  }
+  .note-recent-color {
+    color: $default;
+  }
+  .note-toolbar {
+    padding: 5px 10px 10px 10px;
+    background: $white;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid $gray-2;
+  }
+}
+
+.note-editor {
+  div.panel-heading {
+    padding: 5px 10px 10px !important;
+    margin-left: 0 !important;
+    height: auto !important;
+  }
+  div.panel-body {
+    margin-left: 0 !important;
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .note-editor {
+    border-color: $dark-gray-4 !important;
+    .note-toolbar {
+      background: $dark-gray-5;
+      border-bottom-color: $dark-gray-4;
+    }
+    .note-statusbar {
+      border-top-color: $dark-gray-4 !important;
+      .note-resizebar {
+        background: $dark-gray-5 !important;
+        .note-icon-bar {
+          border-top-color: $dark-gray-4 !important;
+        }
+      }
+    }
+    .note-btn {
+      background: $dark-gray-4;
+      border-color: $dark-gray-4;
+      color: $dark-gray-1 !important;
+    }
+    &.note-frame {
+      .note-editing-area {
+        .note-editable {
+          background-color: $dark-gray-5;
+          color: $dark-gray-1;
+        }
+      }
+    }
+  }
+}

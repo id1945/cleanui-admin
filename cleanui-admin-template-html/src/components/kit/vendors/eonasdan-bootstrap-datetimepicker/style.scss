@@ -1,0 +1,159 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  EONASDAN BOOTSTRAP DATEPICKER */
+
+.bootstrap-datetimepicker-widget {
+  max-width: 19em;
+  table {
+    thead {
+      tr {
+        &:first-child {
+          th {
+            &:hover {
+              background: none;
+              color: $primary !important;
+            }
+            &.prev,
+            &.next {
+              color: $gray-4;
+            }
+          }
+        }
+      }
+    }
+    td {
+      @include transition-middle();
+      span {
+        &.active {
+          background: $primary !important;
+        }
+        &:hover {
+          background-color: $gray-6;
+          color: $white;
+        }
+        &.timepicker-hour,
+        &.timepicker-minute {
+          color: $black;
+          background: none !important;
+        }
+      }
+      &.minute:hover {
+        background-color: $gray-1;
+      }
+    }
+    th {
+      width: 32px;
+      height: 28px;
+      line-height: 28px;
+      &.dow {
+        font-weight: 600;
+      }
+      &.picker-switch {
+        width: 165px;
+      }
+    }
+    td.day {
+      width: 32px;
+      height: 28px;
+      line-height: 28px;
+      &:hover {
+        background: $gray-6;
+        color: $white;
+      }
+      &.new {
+        color: $gray-2;
+        &:hover {
+          color: $white !important;
+        }
+      }
+      &.old {
+        color: $gray-2;
+        &:hover {
+          color: $white !important;
+        }
+      }
+    }
+    td.active,
+    table td.active:hover {
+      &.active,
+      &:active:hover {
+        background-color: $primary;
+        color: $white !important;
+      }
+    }
+  }
+  .timepicker-hours,
+  .timepicker-minutes {
+    td {
+      &:hover {
+        background: $gray-6 !important;
+        color: $white;
+      }
+    }
+  }
+  a[data-action].btn {
+    padding: 0;
+    background: none;
+    color: $black;
+    border: none !important;
+    &:hover {
+      color: $white;
+      background: $gray-6;
+    }
+    &:hover {
+      span {
+        background: none !important;
+      }
+    }
+  }
+  .accordion-toggle {
+    span {
+      color: $black;
+      background: $gray-2;
+      &:hover {
+        color: $white;
+        background-color: $primary;
+      }
+    }
+  }
+  &.dropdown-menu {
+    width: 300px;
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .datepicker,
+  .timepicker {
+    background: $dark-gray-5;
+    color: $dark-gray-1;
+
+    .timepicker-hour,
+    .timepicker-minute {
+      color: $dark-gray-1;
+    }
+  }
+
+  .bootstrap-datetimepicker-widget a[data-action].btn {
+    background: $dark-gray-5;
+    color: $dark-gray-1;
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+
+  .bootstrap-datetimepicker-widget a[data-action]:not(.btn) span {
+    background: $dark-gray-4;
+    color: $dark-gray-1;
+    &:hover {
+      background: $primary;
+      color: $white;
+    }
+  }
+}

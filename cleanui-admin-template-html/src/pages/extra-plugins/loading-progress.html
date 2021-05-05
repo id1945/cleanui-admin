@@ -1,0 +1,71 @@
+<div class="kit__utils__heading">
+  <h5>
+    <span class="mr-3">Loading progress</span>
+    <a href="http://ricostacruz.com/nprogress/" target="_blank" class="btn btn-sm btn-light">
+      Official Documentation
+      <i class="fe fe-corner-right-up"></i>
+    </a>
+  </h5>
+</div>
+<div class="card">
+  <div class="card-body">
+    <h5 class="mb-4">
+      <strong>Page Loading Progress Bar</strong>
+    </h5>
+    <div class="mb-5">
+      <button
+        type="button"
+        class="btn btn-light mr-2 mb-2"
+        data-toggle="modal"
+        onclick="NProgress.start();"
+      >
+        <i class="fe fe-play mr-2"></i>
+        NProgress Start
+      </button>
+      <button
+        type="button"
+        class="btn btn-light mr-2 mb-2"
+        data-toggle="modal"
+        onclick="NProgress.set(0.4);"
+      >
+        <i class="fe fe-edit mr-2"></i>
+        NProgress Set 40%
+      </button>
+      <button
+        type="button"
+        class="btn btn-light mr-2 mb-2"
+        data-toggle="modal"
+        onclick="NProgress.inc();"
+      >
+        <i class="fe fe-plus mr-2"></i>
+        NProgress Increment
+      </button>
+      <button
+        type="button"
+        class="btn btn-light mr-2 mb-2"
+        data-toggle="modal"
+        onclick="NProgress.done();"
+      >
+        <i class="fe fe-pause mr-2"></i>
+        NProgress Done
+      </button>
+      <br />
+      <button
+        type="button"
+        class="btn btn-light mr-2 mb-2"
+        data-toggle="modal"
+        onclick="NProgress.configure({ showSpinner: true });"
+      >
+        Show Spinner (needs to restart)
+      </button>
+      <button
+        type="button"
+        class="btn btn-light mr-2 mb-2"
+        data-toggle="modal"
+        onclick="NProgress.configure({ showSpinner: false });"
+      >
+        Hide Spinner (needs to restart)
+      </button>
+    </div>
+  </div>
+</div>

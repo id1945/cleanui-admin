@@ -1,0 +1,92 @@
+@import 'src/components/mixins';
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/* MESSAGING APP */
+
+.kit {
+  &__messaging {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    @media (max-width: $sm-max-width) {
+      flex-direction: column;
+    }
+
+    &__sidebar {
+      width: rem(250);
+      flex-shrink: 0;
+
+      @media (max-width: $sm-max-width) {
+        width: auto;
+      }
+    }
+
+    &__searchIcon {
+      position: absolute;
+      color: $gray-4;
+      font-size: rem(17);
+      top: 50%;
+      transform: translateY(-50%);
+      left: rem(15);
+    }
+
+    &__searchInput {
+      border: 1px solid $gray-2;
+      border-radius: 5px;
+      background-color: $white;
+      padding-left: rem(45);
+      padding-right: rem(20);
+      padding-top: rem(5);
+      padding-bottom: rem(4);
+      width: 100%;
+    }
+
+    &__dialogItems {
+      height: 100%;
+
+      @media (max-width: $sm-max-width) {
+        max-height: rem(240);
+        margin-bottom: rem(15);
+      }
+    }
+
+    &__dialogItem {
+      padding: rem(10);
+      cursor: pointer;
+      border-radius: 5px;
+      margin-bottom: rem(15);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover,
+      &--current {
+        background-color: $light;
+      }
+    }
+
+    &__dialogInfo {
+      min-width: 0;
+    }
+
+    &__dialogBadge {
+      min-width: 15px;
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .kit {
+    &__messaging {
+      &__dialogItem {
+        &:hover,
+        &--current {
+          background-color: $dark-gray-4;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<div class="font-weight-bold text-dark font-size-24">
+  900
+</div>
+<div>Completed</div>
+<div class="kit__c4-2__chart height-200 ct-hidden-points"></div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 4-2" module scripts
+
+  ; (function ($) {
+    'use strict'
+    $(function () {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      new Chartist.Line(
+        '.kit__c4-2__chart',
+        {
+          "labels": [
+            "Jan",
+            "Feb",
+            "Mar",
+            "Apr",
+            "May",
+            "Jun"
+          ],
+          "series": [
+            {
+              "className": "ct-series-j",
+              "data": [
+                2,
+                3,
+                2,
+                4,
+                6,
+                5
+              ]
+            }
+          ]
+        },
+        {
+          chartPadding: {
+            right: 0,
+            left: 0,
+            top: 5,
+            bottom: 5,
+          },
+          fullWidth: true,
+          showPoint: true,
+          lineSmooth: true,
+          axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          axisX: {
+            showGrid: true,
+            showLabel: true,
+            offset: 20,
+          },
+          showArea: false,
+          plugins: [Chartist.plugins.tooltip()],
+        },
+      )
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

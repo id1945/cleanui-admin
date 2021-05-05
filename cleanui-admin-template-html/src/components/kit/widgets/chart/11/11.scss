@@ -1,0 +1,34 @@
+@import 'src/components/mixins';
+
+.kit__c11 {
+  &__chartContainer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__chart {
+    svg {
+      vertical-align: top;
+    }
+
+    .ct-line {
+      stroke-width: 1px;
+    }
+
+    .ct-point {
+      stroke-width: 5px;
+    }
+
+    .ct-series-a {
+      .ct-area {
+        fill: rgba(75, 124, 243, 0.1) !important;
+        fill-opacity: 1 !important;
+      }
+
+      .ct-line {
+        stroke: #4b7cf3 !important;
+      }
+    }
+  }
+}

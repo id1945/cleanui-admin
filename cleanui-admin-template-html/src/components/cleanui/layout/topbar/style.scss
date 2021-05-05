@@ -1,0 +1,359 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  STYLES FOR "cui-topbar" MODULE */
+
+.cui__topbar {
+  padding: 0 rem(30);
+  min-height: 64px;
+  height: 64px;
+  border-bottom: 1px solid $border;
+  color: $text;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+
+  @media (max-width: $sm-max-width) {
+    padding: 0 rem(16);
+  }
+
+  .dropdown {
+    &:hover {
+      color: $primary;
+
+      .dropdown-toggle-icon {
+        color: $primary;
+      }
+    }
+  }
+
+  .dropdown-toggle-icon {
+    margin-right: rem(4);
+    position: relative;
+    bottom: -2px;
+    font-size: rem(17);
+    color: $gray-5;
+    @include transition-slow;
+  }
+
+  &__search {
+    position: relative;
+
+    input {
+      background-color: $gray-1;
+      border: 1px solid $border;
+      padding: 4px 15px 4px 34px;
+      transition: all 0.3s;
+      border-radius: 4px;
+      height: 32px;
+
+      &:focus,
+      &:hover {
+        border-color: $primary;
+      }
+
+      @media screen and (max-width: $md-max-width) {
+        width: 30px !important;
+        padding-left: 22px !important;
+      }
+    }
+
+    i {
+      position: absolute;
+      top: 8px;
+      left: 14px;
+      cursor: pointer;
+      color: $gray-5;
+    }
+  }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+  /*  BOOKMARKS */
+
+  &__favs {
+    width: rem(300);
+
+    &__item {
+      cursor: pointer;
+      margin-right: rem(8);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      > div {
+        display: inline;
+      }
+    }
+
+    &__setIcon {
+      float: right;
+      opacity: 0.3;
+      @include transition-slow;
+      font-size: rem(17);
+      line-height: 1;
+      position: relative;
+      top: 2px;
+
+      &:hover,
+      &.cui__topbar__favs__setIconActive {
+        opacity: 1;
+        color: $primary;
+      }
+    }
+
+    &__link {
+      display: block;
+      padding: rem(5) rem(8);
+      background: $white;
+      @include transition-slow;
+      border-radius: 3px;
+
+      > span {
+        display: block;
+        width: calc(100% - 20px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      &:hover {
+        background: $gray-1;
+      }
+    }
+  }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+  /*  LIVESEARCH */
+
+  &__livesearch {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $white;
+    z-index: 12000;
+    opacity: 0;
+    visibility: hidden;
+    @include transition-slow;
+
+    &__visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &__close {
+      font-size: rem(12);
+      color: $default;
+      position: absolute;
+      top: rem(30);
+      right: rem(30);
+      cursor: pointer;
+      outline: none !important;
+      z-index: 1;
+      border: none;
+      background-color: transparent;
+      @include transition-slow;
+
+      &:hover {
+        color: $text;
+      }
+    }
+
+    &__wrapper {
+      padding-top: rem(60);
+      padding-left: rem(65);
+      padding-right: rem(15);
+      line-height: 1.7;
+
+      @media screen and (max-width: $sm-max-width) {
+        padding-left: rem(20);
+        padding-right: rem(20);
+      }
+    }
+
+    &__logo {
+      height: rem(45);
+
+      &__container {
+        margin-top: rem(20);
+        margin-bottom: rem(30);
+      }
+    }
+
+    &__input {
+      width: 100%;
+      border: none;
+      font-size: rem(64);
+      background-color: transparent;
+      font-weight: bold;
+      padding: 0;
+      margin-bottom: rem(20);
+
+      @media screen and (max-width: $sm-max-width) {
+        font-size: rem(40);
+      }
+    }
+
+    &__options {
+      padding: 0;
+      margin: 0;
+      margin-bottom: rem(30);
+      list-style: none;
+    }
+
+    &__option {
+      display: inline-block;
+      margin-right: rem(26);
+      font-size: rem(14);
+      color: $text;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    &__suggestion {
+      margin-bottom: rem(40);
+
+      @media (max-width: $sm-max-width) {
+        margin-bottom: rem(15);
+      }
+    }
+
+    &__results {
+      &__title {
+        font-weight: 700;
+        margin-bottom: rem(20);
+      }
+    }
+
+    &__result {
+      display: block;
+      margin-left: rem(70);
+      padding-top: rem(8);
+
+      &__thumb {
+        display: block;
+        width: rem(50);
+        height: rem(50);
+        border-radius: 4px;
+        overflow: hidden;
+        background-color: $default;
+        color: #fff;
+        line-height: rem(54);
+        text-align: center;
+        font-size: rem(18);
+        font-weight: bold;
+        background-size: cover;
+        float: left;
+      }
+
+      &__content {
+        margin-bottom: rem(20);
+        min-height: rem(50);
+      }
+
+      &__text {
+        font-weight: 300;
+        font-size: rem(20);
+        line-height: 1;
+
+        @media (max-width: $sm-max-width) {
+          font-size: rem(16);
+        }
+      }
+
+      &__source {
+        color: $text;
+      }
+    }
+  }
+
+  /////////////////////////////////////////////////////////////////////////////////////////
+  /* SETTINGS */
+  &--fixed {
+    .cui__layout__header {
+      position: sticky;
+      top: 0;
+      z-index: 998;
+    }
+  }
+
+  @at-root {
+    [data-kit-theme='default'] &--gray {
+      .cui__topbar {
+        background: $gray-1 !important;
+      }
+    }
+  }
+  // &--gray:not(.kit__dark) {
+  //   .cui__topbar {
+  //     background: $gray-1 !important;
+  //   }
+  // }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .cui__topbar {
+    background: $dark-gray-6;
+    color: $dark-gray-1;
+    border-bottom: 1px solid $dark-gray-4;
+
+    .dropdown {
+      .dropdown-toggle-text {
+        color: $dark-gray-2;
+      }
+
+      &:hover {
+        .dropdown-toggle-text {
+          color: $primary;
+        }
+      }
+    }
+
+    .dropdown-toggle-icon {
+      color: $dark-gray-2;
+    }
+
+    &__search {
+      input {
+        background-color: $dark-gray-4;
+        border-color: $dark-gray-4;
+      }
+
+      i {
+        color: $dark-gray-3 !important;
+      }
+    }
+
+    &__livesearch {
+      background-color: $dark-gray-6;
+
+      &__result__thumb {
+        background-color: $dark-gray-4;
+      }
+    }
+
+    &__favs {
+      &__icon {
+        color: $dark-gray-2;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      &__link {
+        background: $dark-gray-6;
+
+        &:hover {
+          background: $dark-gray-5;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+@import 'src/components/mixins';
+
+.kit__l17 {
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: rem(20);
+
+    .kit__utils__control {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-items: center;
+    }
+
+    .kit__utils__control__indicator {
+      flex-shrink: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__separator {
+    height: rem(32);
+    width: 4px;
+    border-radius: 3px;
+    flex-shrink: 0;
+    background-color: $gray-2;
+  }
+}

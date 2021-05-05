@@ -1,0 +1,9 @@
+@import 'src/components/mixins';
+
+.kit__c5 {
+  &__chart {
+    .ct-bar {
+      stroke-width: 15px;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<div>
+  <div class="card-body">
+    <div class="font-weight-bold font-size-36 font-weight-bold text-success">
+      12,255Gb
+    </div>
+  </div>
+  <div class="position-relative">
+    <div class="kit__c13-1__chart ct-hidden-points"></div>
+  </div>
+</div>
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 13-1" module scripts
+
+  ; (function ($) {
+    'use strict'
+    $(function () {
+      new Chartist.Line(
+        '.kit__c13-1__chart',
+        {
+          series: [
+            {
+              className: 'ct-series-b',
+              data: [3, 14, 37, 26, 48, 8, 63, 21, 24, 52],
+            },
+          ],
+        },
+        {
+          lineSmooth: Chartist.Interpolation.none({
+            fillHoles: false,
+          }),
+          height: '150px',
+
+          showPoint: true,
+          showLine: true,
+          showArea: true,
+          fullWidth: true,
+          showLabel: false,
+          axisX: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          chartPadding: 0,
+          low: 0,
+          plugins: [Chartist.plugins.tooltip()],
+        },
+      )
+    })
+  })(jQuery)
+</script>

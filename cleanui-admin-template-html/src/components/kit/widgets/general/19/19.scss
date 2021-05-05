@@ -1,0 +1,25 @@
+@import 'src/components/mixins';
+
+.kit__g19 {
+  &__headerText {
+    position: absolute;
+    top: rem(20);
+    left: rem(20);
+    font-size: rem(36);
+
+    @media (max-width: $sm-max-width) {
+      font-size: rem(30);
+    }
+
+    @media (max-width: $sm-max-width) {
+      font-size: rem(26);
+    }
+  }
+
+  &__user {
+    text-align: center;
+    margin-top: rem(-47);
+    position: relative;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,67 @@
+<div class="card-body">
+  <div class="text-dark font-size-18 font-weight-bold mb-1">Income Progress</div>
+  <div class="text-gray-6 mb-2">Revenue by location and date</div>
+  <div class="font-weight-bold font-size-36 text-dark mb-2">$390,012.01</div>
+  <div class="d-flex align-items-center">
+    <div class="kit__c6__progressIcon bg-gray-4 text-white mr-3">
+      <i class="fe fe-menu font-size-18"></i>
+    </div>
+    <div class="flex-grow-1">
+      <div class="text-dark font-size-18 font-weight-bold text-nowrap mb-2">
+        78% from $500,000.00
+      </div>
+      <div class="progress">
+        <div class="progress-bar bg-success" style="width: 70%;"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="kit__c6__chart height-200 ct-hidden-points"></div>
+
+<script>
+  /////////////////////////////////////////////////////////////////////////////////////////
+  // "Chart Widget 6" module scripts
+
+  ; (function ($) {
+    'use strict'
+    $(function () {
+      /////////////////////////////////////////////////////////////////////////////////////////
+      new Chartist.Line(
+        '.kit__c6__chart',
+        {
+          series: [
+            {
+              className: 'ct-series-h',
+              data: [4, 6, 4, 3, 5, 7, 8, 7],
+            },
+          ],
+        },
+        {
+          low: 0,
+          chartPadding: {
+            right: 0,
+            left: 0,
+            top: 5,
+            bottom: 0,
+          },
+          fullWidth: true,
+          showPoint: true,
+          lineSmooth: false,
+          axisY: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          axisX: {
+            showGrid: false,
+            showLabel: false,
+            offset: 0,
+          },
+          showArea: true,
+          plugins: [Chartist.plugins.tooltip()],
+        },
+      )
+      /////////////////////////////////////////////////////////////////////////////////////////
+    })
+  })(jQuery)
+</script>

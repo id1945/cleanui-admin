@@ -1,0 +1,40 @@
+@import 'src/components/mixins';
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/* GITHUB */
+
+.kit {
+  &__github {
+    &__discuss {
+      &__commentEditor {
+        background-color: red;
+        .note-editor {
+          border: none;
+        }
+        .note-editor.note-frame .note-editing-area .note-editable {
+          padding: rem(15);
+        }
+
+        .note-style {
+          .dropdown-menu.dropdown-style {
+            min-width: 160px;
+          }
+
+          pre {
+            padding: rem(5);
+          }
+
+          p {
+            margin: 0;
+          }
+        }
+
+        .note-color {
+          .btn-group {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

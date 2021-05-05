@@ -1,0 +1,119 @@
+<div class="kit__utils__heading">
+  <h5>
+    <span class="mr-3">Calendar</span>
+    <a href="http://fullcalendar.io/" target="_blank" class="btn btn-sm btn-light">
+      Official Documentation
+      <i class="fe fe-corner-right-up"></i>
+    </a>
+  </h5>
+</div>
+<div class="card">
+  <div class="card-body">
+    <div class="example-calendar-block"></div>
+  </div>
+</div>
+
+<script>
+  ;(function($) {
+    'use strict'
+    $(function() {
+      $('.example-calendar-block').fullCalendar({
+        //aspectRatio: 2,
+        height: 800,
+        header: {
+          left: 'prev, next',
+          center: 'title',
+          right: 'month, agendaWeek, agendaDay',
+        },
+        buttonIcons: {
+          prev: 'none fe fe-arrow-left',
+          next: 'none fe fe-arrow-right',
+          prevYear: 'none fe fe-arrow-left',
+          nextYear: 'none fe fe-arrow-right',
+        },
+        defaultDate: '2016-05-12',
+        editable: true,
+        eventLimit: true, // allow "more" link when too many events
+        viewRender: function(view, element) {
+          if (!('ontouchstart' in document.documentElement) && jQuery().jScrollPane) {
+            $('.fc-scroller').jScrollPane({
+              autoReinitialise: true,
+              autoReinitialiseDelay: 100,
+            })
+          }
+        },
+        events: [
+          {
+            title: 'All Day Event',
+            start: '2016-05-01',
+            className: 'fc-event-success',
+          },
+          {
+            title: 'Long Event',
+            start: '2016-05-07',
+            end: '2016-05-10',
+          },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2016-05-09T16:00:00',
+            className: 'fc-event-default',
+          },
+          {
+            id: 999,
+            title: 'Repeating Event',
+            start: '2016-05-16T16:00:00',
+            className: 'fc-event-success',
+          },
+          {
+            title: 'Conference',
+            start: '2016-05-11',
+            end: '2016-05-13',
+            className: 'fc-event-danger',
+          },
+          {
+            title: 'Meeting',
+            start: '2016-05-12T10:30:00',
+            end: '2016-05-12T12:30:00',
+            className: 'fc-event-default',
+          },
+          {
+            title: 'Lunch',
+            start: '2016-05-12T12:00:00',
+            className: 'fc-event-default',
+          },
+          {
+            title: 'Meeting',
+            start: '2016-05-12T14:30:00',
+            className: 'fc-event-info',
+          },
+          {
+            title: 'Happy Hour',
+            start: '2016-05-12T17:30:00',
+          },
+          {
+            title: 'Dinner',
+            start: '2016-05-12T20:00:00',
+          },
+          {
+            title: 'Birthday Party',
+            start: '2016-05-13T07:00:00',
+            className: 'fc-event-danger',
+          },
+          {
+            title: 'Click for Google',
+            url: 'javascript: alert("Clicked: External URL");',
+            start: '2016-05-28',
+            className: 'fc-event-warning',
+          },
+        ],
+        eventClick: function(calEvent, jsEvent, view) {
+          if (!$(this).hasClass('event-clicked')) {
+            $('.fc-event').removeClass('event-clicked')
+            $(this).addClass('event-clicked')
+          }
+        },
+      })
+    })
+  })(jQuery)
+</script>

@@ -1,0 +1,192 @@
+@import 'src/components/mixins';
+
+/////////////////////////////////////////////////////////////////////////////////////////
+/*  JQUERY STEPS */
+
+.wizard {
+  > .content {
+    background: $white !important;
+
+    > .body input.form-control {
+      font-family: 'Nunito Sans', sans-serif;
+      border-color: $gray-3;
+
+      &:hover {
+        border-color: $primary;
+      }
+    }
+  }
+
+  &-steps-icon,
+  .number {
+    border: 3px solid $primary;
+    border-radius: 5px;
+    width: rem(45);
+    height: rem(45);
+    display: inline-block;
+    text-align: center;
+    line-height: rem(42);
+    color: $primary;
+    font-size: rem(24);
+    background: $white;
+  }
+  &-steps-title {
+    display: block;
+  }
+  .steps {
+    ul {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      li {
+        flex-grow: 200;
+        margin-bottom: rem(10);
+        float: none;
+        width: auto;
+        position: relative;
+        a {
+          background: transparent !important;
+          margin: 0 !important;
+          text-align: center;
+          color: $black !important;
+          line-height: rem(30);
+          position: relative;
+          z-index: 2;
+          .number {
+            display: none;
+          }
+        }
+        &:before,
+        &:after {
+          position: absolute;
+          content: '';
+          display: block;
+          width: 50%;
+          top: rem(36);
+          right: 0;
+          height: rem(3);
+          background: $primary;
+          z-index: 1;
+        }
+        &:after {
+          right: auto;
+          left: 0;
+        }
+        &:first-child {
+          &:after {
+            display: none;
+          }
+        }
+        &:last-child {
+          &:before {
+            display: none;
+          }
+        }
+        &.disabled {
+          &:before,
+          &:after {
+            background: $gray-3;
+          }
+          .wizard-steps-icon,
+          .number {
+            border-color: $gray-3;
+            background: $gray-3;
+            color: $white;
+          }
+          a {
+            color: $gray-3 !important;
+          }
+        }
+      }
+    }
+  }
+  .actions {
+    text-align: center;
+    li {
+      margin-left: 0 !important;
+      a {
+        background-color: $primary;
+        border-color: $primary;
+        min-width: rem(120);
+        text-align: center;
+        &:hover,
+        &:active {
+          background-color: $blue-light;
+          border-color: $blue-light;
+        }
+      }
+      &.disabled {
+        a {
+          background-color: $gray-3 !important;
+          border-color: $gray-3 !important;
+          color: $white !important;
+          cursor: not-allowed;
+          opacity: 0.65;
+        }
+      }
+    }
+  }
+  &-numbers {
+    .number {
+      padding-left: 3px;
+    }
+    .steps {
+      ul {
+        li {
+          a {
+            .number {
+              display: inline-block !important;
+              line-height: rem(42);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .wizard {
+    > .content {
+      background: $dark-gray-5 !important;
+    }
+    .wizard-steps-icon,
+    .number {
+      background: $dark-gray-5;
+    }
+    .steps {
+      ul {
+        li {
+          a {
+            color: $primary !important;
+          }
+
+          &.disabled {
+            &:before,
+            &:after {
+              background: $dark-gray-4;
+            }
+            .wizard-steps-icon,
+            .number {
+              background: $dark-gray-5;
+              border-color: $dark-gray-4;
+              color: $dark-gray-3;
+            }
+          }
+        }
+      }
+    }
+
+    .actions {
+      li {
+        &.disabled {
+          a {
+            background-color: $dark-gray-5 !important;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+  }
+}

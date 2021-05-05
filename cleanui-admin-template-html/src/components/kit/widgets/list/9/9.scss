@@ -1,0 +1,70 @@
+@import 'src/components/mixins';
+
+.kit__l9 {
+  &__item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-bottom: rem(30);
+    position: relative;
+    min-height: 96px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% + 28px);
+      transform: translateY(-50%);
+      left: rem(33);
+      bottom: 0;
+      width: 5px;
+      height: 32px;
+      background-image: url('../../../../kit/core/img/3-rounds.png');
+      background-repeat: no-repeat;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__itemPicContainer {
+    align-self: flex-start;
+    position: relative;
+    margin-right: rem(20);
+    margin-left: rem(15);
+  }
+
+  &__itemPic {
+    width: rem(43);
+    height: rem(43);
+    border-radius: 50%;
+    line-height: rem(43);
+    flex-shrink: 0;
+    opacity: 0.4;
+  }
+
+  &__itemIcon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: rem(18);
+    color: $white;
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .kit__l9 {
+    &__item {
+      &:before {
+        opacity: 0.1;
+      }
+    }
+  }
+}

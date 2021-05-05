@@ -1,0 +1,427 @@
+@import 'src/components/mixins';
+
+//////////////////////////////////////////////////////////////////////////////////////////
+/* CRYPTO TERMINAL */
+
+.cui__crypto {
+  #cryptoChart {
+    text.version {
+      display: none;
+    }
+
+    .axis path,
+    .axis line {
+      fill: none;
+      stroke: $black;
+      shape-rendering: crispEdges;
+    }
+
+    text {
+      fill: $black;
+    }
+
+    path {
+      fill: none;
+      stroke-width: 1px;
+    }
+
+    path.candle {
+      stroke: #000;
+    }
+
+    path.candle.body {
+      stroke-width: 0;
+    }
+
+    path.candle {
+      fill: #777;
+      stroke: #777;
+    }
+
+    path.candle.up {
+      fill: #06a35a;
+      stroke: #06a35a;
+    }
+
+    path.candle.down {
+      fill: #c23f3f;
+      stroke: #c23f3f;
+    }
+
+    .closeValue.annotation.up path {
+      fill: #06a35a;
+    }
+
+    .closeValue.annotation text {
+      fill: $white;
+      font-size: 10px;
+    }
+
+    path.volume {
+      fill: #555;
+    }
+
+    .indicator-plot path.line {
+      fill: none;
+      stroke-width: 1;
+    }
+
+    .ma-0 path.line {
+      stroke: #1f77b4;
+    }
+
+    .ma-1 path.line {
+      stroke: #aec7e8;
+    }
+
+    .ma-2 path.line {
+      stroke: #ff7f0e;
+    }
+
+    button {
+      position: absolute;
+      right: 110px;
+      top: 25px;
+    }
+
+    path.macd {
+      stroke: #aec7e8;
+    }
+
+    path.signal {
+      stroke: #f99;
+    }
+
+    path.zero {
+      stroke: #bbb;
+      stroke-dasharray: 0;
+      stroke-opacity: 0.5;
+    }
+
+    path.difference {
+      fill: #555;
+    }
+
+    path.rsi {
+      stroke: #aec7e8;
+    }
+
+    path.overbought,
+    path.oversold {
+      stroke: #f99;
+      stroke-dasharray: 5, 5;
+    }
+
+    path.middle,
+    path.zero {
+      stroke: #bbb;
+      stroke-dasharray: 5, 5;
+    }
+
+    .analysis path,
+    .analysis circle {
+      stroke: yellow;
+      stroke-width: 0.7;
+    }
+
+    .interaction path,
+    .interaction circle {
+      pointer-events: all;
+    }
+
+    .interaction .body {
+      cursor: move;
+    }
+
+    .trendlines .interaction .start,
+    .trendlines .interaction .end {
+      cursor: nwse-resize;
+    }
+
+    .trendline circle {
+      stroke-width: 0;
+      display: none;
+    }
+    .mouseover .trendline path {
+      stroke-width: 1;
+    }
+
+    .mouseover .trendline circle {
+      stroke-width: 1;
+      fill: yellow;
+      display: inline;
+    }
+
+    .supstance path {
+      stroke-dasharray: 2, 2;
+    }
+
+    .supstances .interaction path {
+      pointer-events: all;
+      cursor: ns-resize;
+    }
+
+    .supstances .axisannotation {
+      display: none;
+    }
+
+    .supstances .mouseover .axisannotation {
+      display: inline;
+    }
+
+    .supstances .axisannotation path {
+      fill: #806517;
+      stroke: none;
+    }
+
+    .mouseover .supstance path {
+      stroke-width: 1.5;
+    }
+
+    .crosshair {
+      cursor: crosshair;
+    }
+
+    .crosshair path.wire {
+      stroke: #555;
+      stroke-dasharray: 1, 1;
+    }
+
+    .crosshair .axisannotation path {
+      fill: #777;
+    }
+
+    .scope-composed-annotation {
+      text {
+        fill: $white;
+        font-size: 10px;
+      }
+    }
+  }
+
+  &__table {
+    .table {
+      tr {
+        &:first-child {
+          td {
+            border-top: 1px solid #e4e9f0;
+          }
+        }
+
+        &:last-child {
+          td {
+            border-bottom: 1px solid #e4e9f0;
+          }
+        }
+
+        td {
+          &:first-child {
+            border-left: 1px solid #e4e9f0;
+          }
+
+          &:last-child {
+            border-right: 1px solid #e4e9f0;
+          }
+        }
+      }
+    }
+  }
+
+  &__list {
+    float: left;
+    width: 200px;
+
+    @media (max-width: $md-max-width) {
+      display: none;
+    }
+  }
+
+  &__list__mobile {
+    display: none;
+    margin-bottom: rem(30);
+
+    @media (max-width: $md-max-width) {
+      display: block;
+    }
+  }
+
+  &__list__title {
+    font-weight: bold;
+    display: block;
+  }
+
+  &__list__item {
+    display: block;
+    background: $gray-1;
+    padding: rem(10) rem(20);
+    margin-bottom: rem(10);
+    border-radius: 5px;
+    color: $black;
+    transition: all 0.1s ease-in-out;
+
+    @at-root {
+      body.cui__layout--grayBackground {
+        .cui__crypto__list__item {
+          background: $white;
+        }
+      }
+    }
+
+    &:hover,
+    &__current {
+      background: $primary;
+      color: $white;
+
+      .cui__crypto__list__percents {
+        span {
+          color: $white !important;
+        }
+      }
+    }
+
+    &:after {
+      clear: both;
+      content: '';
+      display: block;
+    }
+
+    &__negative {
+      .cui__crypto__list__percents {
+        span {
+          color: #f75535;
+          &:after {
+            content: ' ↓';
+            font-family: monospace;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+
+  &__list__currency {
+    float: left;
+    span {
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+  &__list__percents {
+    float: right;
+    text-align: right;
+    span {
+      display: block;
+      font-weight: bold;
+      color: #00a45b;
+      transition: all 0.1s ease-in-out;
+
+      &:after {
+        content: ' ↑';
+        font-family: monospace;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__content {
+    margin-left: 230px;
+
+    @media (max-width: $md-max-width) {
+      margin-left: 0;
+    }
+  }
+
+  &__warning {
+    padding-top: rem(20) !important;
+    padding-bottom: rem(20) !important;
+    cursor: pointer;
+  }
+
+  &__order {
+    display: flex;
+
+    @media (max-width: $xxl-max-width) {
+      display: block;
+    }
+  }
+
+  &__order__left {
+    flex-grow: 1;
+
+    .table {
+      text-align: right;
+
+      td {
+        &:last-child {
+          a {
+            color: $primary;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &__order__middle {
+    width: rem(250);
+    padding: 0 rem(30);
+
+    @media (max-width: $xxl-max-width) {
+      width: auto;
+      margin: rem(20) auto rem(40);
+    }
+  }
+
+  &__order__right {
+    flex-grow: 1;
+
+    .table {
+      td {
+        &:first-child {
+          a {
+            color: $primary;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    .form-control {
+      padding-left: rem(10);
+    }
+  }
+
+  &__form-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: rem(12);
+  }
+
+  &__order__pagination {
+    display: flex;
+    .pagination {
+      margin-left: auto;
+    }
+  }
+}
+
+// dark theme
+[data-kit-theme='dark'] {
+  .cui__crypto {
+    &__table .table tr td {
+      border-color: $dark-gray-4;
+    }
+
+    &__list__item {
+      background: $dark-gray-4 !important;
+
+      &:hover {
+        background: $primary !important;
+        color: $white !important;
+      }
+    }
+  }
+}
